@@ -6,7 +6,7 @@ export default class Home extends Component {
     render () {
         return (
             <Container>
-                <img class="mainImage" src={require("../Assets/image/challenger.gif")} alt="challenger-smash" />
+                <img className="mainImage" src={require("../Assets/image/challenger.gif")} alt="challenger-smash" />
                 <p>Mussum Ipsum, cacilds vidis litro abertis.
                      Interagi no mé, cursus quis, vehicula ac nisi.
                      Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
