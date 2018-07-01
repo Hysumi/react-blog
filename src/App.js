@@ -5,6 +5,9 @@ import {
     BrowserRouter as Router
 } from "react-router-dom";
 
+// Components
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+
 // Containers
 import Home from "./containers/Home/Home";
 import Blog from "./containers/Blog/Blog";
@@ -32,20 +35,17 @@ const Topics = ({ match }) => (
 class App extends Component {
     render () {
         return (
-            <Router>
-                <div>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">Blog</Link></li>
-                        <li><Link to="topics">Topics</Link></li>
-                    </ul>
-
-                    <hr />
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={Blog} />
-                    <Route path="/topics" component={Topics} />
-                </div>
-            </Router>
+            <div>
+                <Router>
+                    <div>
+                        <NavigationBar/>
+                        <hr />
+                        <Route exact path="/" component={Home} />
+                        <Route path="/blog" component={Blog} />
+                        <Route path="/topics" component={Topics} />
+                    </div>
+                </Router>
+            </div>
         );
     }
 }
