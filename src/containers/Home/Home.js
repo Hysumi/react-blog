@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import { Page } from "./Home.style";
 export default class Home extends Component {
     render () {
         return (
-            <div>
+            <Page>
                 <h1> Home </h1>
                 <h1> Home </h1>
                 <h1> Home </h1>
@@ -53,7 +53,7 @@ export default class Home extends Component {
                 <h1> Home </h1>
                 <h1> Home </h1>
                 <h1> Home </h1>
-            </div>
+            </Page>
         );
     }
 }

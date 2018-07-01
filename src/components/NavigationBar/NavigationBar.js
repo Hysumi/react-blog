@@ -4,14 +4,18 @@ import { NavigationContainer, NavItem } from "./NavigationBar.style";
 class NavigationBar extends Component {
     render () {
         return (
-            <NavigationContainer>
-                <NavItem to="/">
-                    Home
-                </NavItem>
-                <NavItem to="/blog">
-                    Blog
-                </NavItem>
-            </NavigationContainer>
+            <header>
+                <div className="logo">LOGO</div>
+                <nav>
+                    <NavItem to="/">
+                        Home
+                    </NavItem>
+                    <NavItem to="/blog">
+                        Blog
+                    </NavItem>
+                </nav>
+            </header>
+
         );
     }
 }

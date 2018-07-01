@@ -5,6 +5,9 @@ import {
     BrowserRouter as Router
 } from "react-router-dom";
 
+// Includes
+import "./assets/css/default.min.css";
+
 // Components
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 
@@ -69,17 +72,15 @@ const RouteWithSubRoutes = (route) => (
 class App extends Component {
     render () {
         return (
-            <div>
-                <Router>
-                    <div>
-                        <NavigationBar/>
-                        <Route exact path="/" component={Home} />
-                        <Link to="/tacos">Tacos</Link>
-                        {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
 
-                    </div>
-                </Router>
-            </div>
+            <Router>
+                <div className="App">
+                    <NavigationBar/>
+                    <Route exact path="/" component={Home} />
+                    <Link to="/tacos">Tacos</Link>
+                    {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+                </div>
+            </Router>
         );
     }
 }

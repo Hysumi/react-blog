@@ -3,9 +3,7 @@ import { Flex, Div } from "../../theme/grid";
 import { Link } from "react-router-dom";
 
 export const NavigationContainer = styled(Flex)`
-    position: fixed;
-    right: 2em;
-    top: 0.5em;
+
 `;
 
 export const NavItem = styled(Link)`
@@ -14,7 +12,7 @@ export const NavItem = styled(Link)`
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    color: black;
+    color: white;
 
     &:hover{
         color: yellow;
