@@ -12,25 +12,59 @@ import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Home from "./containers/Home/Home";
 import Blog from "./containers/Blog/Blog";
 
-const Topic = ({ match }) => (
+const Tacos = ({ routes }) => (
     <div>
-        <h2>{match.params.topicId}</h2>
-    </div>
-);
-
-const Topics = ({ match }) => (
-    <div>
-        <h2>Topics</h2>
+        <h2>Tacos</h2>
         <ul>
-            <li><Link to={`${match.url}/rendering`}>Rendering with React</Link></li>
-            <li><Link to={`${match.url}/components`}>Components</Link></li>
-            <li><Link to={`${match.url}/props-v-state`}>Props v. State</Link></li>
+            <li>
+                <Link to="/tacos/bus">Bus</Link>
+            </li>
+            <li>
+                <Link to="/tacos/cart">Cart</Link>
+            </li>
         </ul>
 
-        <Route exact path="/topics/:topicId" component={Topic} />
+        {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
     </div>
 );
 
+const Bus = () => <h3>Bus</h3>;
+const Cart = () => <h3>Cart</h3>;
+
+
+// Route Config
+const routes = [
+    {
+        path: "/blog",
+        component: Blog
+    },
+    {
+        path: "/tacos",
+        component: Tacos,
+        routes: [
+            {
+                path: "/tacos/bus",
+                component: Bus
+            },
+            {
+                path: "/tacos/cart",
+                component: Cart
+            }
+        ]
+    }
+];
+
+// Wrap <Route> and use this everywhere instead, then when
+// sub routes are added to any route it'll work
+const RouteWithSubRoutes = (route) => (
+    <Route
+        path={route.path}
+        render={(props) => (
+        // Pass the sub-routes down to keep nesting
+            <route.component {...props} routes={route.routes} />
+        )}
+    />
+);
 
 class App extends Component {
     render () {
@@ -39,10 +73,10 @@ class App extends Component {
                 <Router>
                     <div>
                         <NavigationBar/>
-                        <hr />
                         <Route exact path="/" component={Home} />
-                        <Route path="/blog" component={Blog} />
-                        <Route path="/topics" component={Topics} />
+                        <Link to="/tacos">Tacos</Link>
+                        {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+
                     </div>
                 </Router>
             </div>
