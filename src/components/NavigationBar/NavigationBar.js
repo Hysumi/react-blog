@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavigationContainer, NavItem, Header, Logo } from "./NavigationBar.style";
+import { HomeColor, BlogColor } from "../../theme/variables";
 
 class NavigationBar extends Component {
     render () {
@@ -7,10 +8,10 @@ class NavigationBar extends Component {
             <Header>
                 <Logo>LOGO</Logo>
                 <NavigationContainer>
-                    <NavItem to="/">
+                    <NavItem maincolor={HomeColor} to="/">
                         Home
                     </NavItem>
-                    <NavItem to="/blog">
+                    <NavItem maincolor={BlogColor} to="/blog">
                         Blog
                     </NavItem>
                 </NavigationContainer>

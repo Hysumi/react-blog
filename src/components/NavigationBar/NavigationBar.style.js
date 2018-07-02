@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Flex, Div } from "../../theme/grid";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
@@ -21,27 +20,29 @@ export const NavigationContainer = styled.nav`
 
 export const NavItem = styled(Link)`
     margin-right: 1em;
-    font-size: 1.5em;
+    font-size: 1.3em;
     cursor: pointer;
     position: relative;
     text-decoration: none;
     color: white;
-    &:hover{
-        color: yellow;
-        -webkit-transition: .4s ease-in-out;
-        -moz-transition: .4s ease-in-out;
-        transition: .4s ease-in-out;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: red;
-            z-index: -1;
-            transform: scale(1.2, 0.1) translate(0, 7em);
-        }
+    &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: ${(props) => props.maincolor};
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover:before{
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
     }
 `;
 

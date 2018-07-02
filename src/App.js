@@ -71,7 +71,7 @@ class App extends Component {
         return (
 
             <Router>
-                <div className="App">
+                <div>
                     <NavigationBar/>
                     <Route exact path="/" component={Home} />
                     <Link to="/tacos">Tacos</Link>
