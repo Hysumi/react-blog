@@ -11,10 +11,40 @@ export const Container = styled(Div)`
     padding-left: 120px;
     padding-right: 120px;
     padding-top: 30px;
-    ${media.phone`
+    ${media.mobileS`
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+    `}
+    ${media.mobileM`
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+    `}
+    ${media.mobileL`
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 10px;
+    `}
+    ${media.tablet`
+        padding-left: 70px;
+        padding-right: 70px;
         padding-top: 15px;
+    `}
+    ${media.laptop`
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 30px;
+    `}
+    ${media.laptopL`
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-top: 30px;
+    `}
+    ${media.desktop`
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 30px;
     `}
 `;
 

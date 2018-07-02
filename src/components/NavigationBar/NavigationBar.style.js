@@ -6,7 +6,7 @@ export const Header = styled.header`
     display: block;
     width: 100%;
     background: white;
-    color: ${(props) => props.navColor};
+    color: ${(props) => props.navigationcolor};
     height: 60px;
     box-shadow: 0px 0px 5px black;
 `;
@@ -25,7 +25,7 @@ export const NavItem = styled(Link)`
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    color: ${(props) => props.navColor};
+    color: ${(props) => props.navigationcolor};
     &:before{
         content: "";
         position: absolute;

@@ -5,18 +5,17 @@ import { HomeColor, BlogColor, TitleColor } from "../../theme/variables";
 class NavigationBar extends Component {
     render () {
         return (
-            <Header navColor={TitleColor}>
+            <Header navigationcolor={TitleColor}>
                 <Logo>LOGO</Logo>
                 <NavigationContainer>
-                    <NavItem navColor={TitleColor} maincolor={HomeColor} to="/">
+                    <NavItem navigationcolor={TitleColor} maincolor={HomeColor} to="/">
                         Home
                     </NavItem>
-                    <NavItem navColor={TitleColor} maincolor={BlogColor} to="/blog">
+                    <NavItem navigationcolor={TitleColor} maincolor={BlogColor} to="/blog">
                         Blog
                     </NavItem>
                 </NavigationContainer>
             </Header>
-
         );
     }
 }

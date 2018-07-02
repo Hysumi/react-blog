@@ -1,10 +1,13 @@
 import { css } from "styled-components";
 
 const sizes = {
-    phone: 376,
-    tablet: 768,
-    desktop: 992,
-    giant: 1170
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px"
 };
 
 const media = Object.keys(sizes).reduce((finalMedia, size) => {
