@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import { NavigationContainer, NavItem } from "./NavigationBar.style";
+import { NavigationContainer, NavItem, Header, Logo } from "./NavigationBar.style";
 
 class NavigationBar extends Component {
     render () {
         return (
-            <header>
-                <div className="logo">LOGO</div>
-                <nav>
+            <Header>
+                <Logo>LOGO</Logo>
+                <NavigationContainer>
                     <NavItem to="/">
                         Home
                     </NavItem>
                     <NavItem to="/blog">
                         Blog
                     </NavItem>
-                </nav>
-            </header>
+                </NavigationContainer>
+            </Header>
 
         );
     }

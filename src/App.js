@@ -5,9 +5,6 @@ import {
     BrowserRouter as Router
 } from "react-router-dom";
 
-// Includes
-import "./assets/css/default.min.css";
-
 // Components
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 
