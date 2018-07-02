@@ -1,26 +1,24 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Flex } from "../../theme/grid";
 
-export const Header = styled.header`
-    position: fixed;
-    display: block;
-    width: 100%;
-    background: white;
-    color: ${(props) => props.navigationcolor};
+export const HeaderContainer = styled(Flex)`
+    position: Fixed;
+    color: white;
     height: 60px;
+    width: 100%
     box-shadow: 0px 0px 5px black;
 `;
 
-export const NavigationContainer = styled.nav`
-    margin: 0;
-    padding: 0;
-    position: absolute;
+export const NavigationContainer = styled(Flex)`
+    right: 0;
     top: 20%;
-    right: 15px;
+    position: absolute;
 `;
 
 export const NavItem = styled(Link)`
     margin-right: 1em;
+    top: 20%;
     font-size: 1.3em;
     cursor: pointer;
     position: relative;
@@ -31,7 +29,7 @@ export const NavItem = styled(Link)`
         position: absolute;
         width: 100%;
         height: 2px;
-        bottom: 0;
+        top: 1.5em;
         left: 0;
         background-color: ${(props) => props.maincolor};
         visibility: hidden;
@@ -45,10 +43,4 @@ export const NavItem = styled(Link)`
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
-`;
-
-export const Logo = styled.div`
-    top: 30%;
-    left: 15px;
-    position: absolute;
 `;
