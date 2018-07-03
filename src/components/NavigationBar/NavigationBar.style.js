@@ -22,12 +22,22 @@ export const TitleContainer = styled(Flex)`
 `;
 
 export const Logo = styled.img`
+
     width: 70px;
     height: 70px;
 `;
 
-export const NavLink = styled(Link)`
+export const NavImage = styled(Link)`
+`;
 
+export const NavTitle = styled(Link)`
+    margin-right: 1em;
+    font-size: 1.3em;
+    cursor: pointer;
+    line-height: 3;
+    position: relative;
+    text-decoration: none;
+    color: ${(props) => props.navigationcolor};
 `;
 
 export const NavItem = styled(Link)`

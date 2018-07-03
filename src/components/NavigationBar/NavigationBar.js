@@ -1,20 +1,31 @@
 import React, { Component } from "react";
-import { HeaderContainer, TitleContainer, NavigationContainer, NavItem, Logo, NavLink } from "./NavigationBar.style";
-import { HomeColor, BlogColor, TitleColor } from "../../theme/variables";
+import { HeaderContainer, TitleContainer, NavigationContainer, NavTitle, NavItem, Logo, NavImage } from "./NavigationBar.style";
+import { TitleColor, GamesColor, TutorialsColor, BlogColor, AboutColor } from "../../theme/variables";
 
 class NavigationBar extends Component {
     render () {
         return (
             <HeaderContainer>
                 <TitleContainer>
-                    <Logo src={require("../../assets/images/logo.jpg")}/>
-                    <NavItem navigationcolor={TitleColor} maincolor={BlogColor} to="/blog">
-                    Teste
-                    </NavItem>
+                    <NavImage to="/">
+                        <Logo src={require("../../assets/images/logo.jpg")}/>
+                    </NavImage>
+                    <NavTitle navigationcolor={TitleColor} to="/">
+                        Nome do Role
+                    </NavTitle>
                 </TitleContainer>
                 <NavigationContainer>
+                    <NavItem navigationcolor={TitleColor} maincolor={GamesColor} to="/blog">
+                        Games
+                    </NavItem>
+                    <NavItem navigationcolor={TitleColor} maincolor={TutorialsColor} to="/blog">
+                        Tutorials
+                    </NavItem>
                     <NavItem navigationcolor={TitleColor} maincolor={BlogColor} to="/blog">
                         Blog
+                    </NavItem>
+                    <NavItem navigationcolor={TitleColor} maincolor={AboutColor} to="/blog">
+                        About
                     </NavItem>
                 </NavigationContainer>
             </HeaderContainer>
