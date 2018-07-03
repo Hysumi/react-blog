@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Flex, Div } from "../../theme/grid";
+import { Flex } from "../../theme/grid";
 
 export const HeaderContainer = styled(Flex)`
     position: Fixed;
@@ -16,16 +16,18 @@ export const NavigationContainer = styled(Flex)`
     position: absolute;
 `;
 
+export const TitleContainer = styled(Flex)`
+    left: 0;
+    position: absolute;
+`;
+
 export const Logo = styled.img`
-    width: 10%;
+    width: 70px;
+    height: 70px;
 `;
 
 export const NavLink = styled(Link)`
-    cursor: pointer;
-    position: relative;
-    text-decoration: none;
-    margin-right: 1em;
-    font-size: 1.3em;
+
 `;
 
 export const NavItem = styled(Link)`
