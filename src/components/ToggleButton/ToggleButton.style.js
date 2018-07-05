@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TitleColor } from "../../theme/variables";
 
 export const ToggleContainer = styled.div`
     top: 0;
@@ -7,7 +8,7 @@ export const ToggleContainer = styled.div`
 `;
 
 export const ToggleTrigger = styled.div`
-    height: 30px;
+    height: 40px;
     width: 25px;
 
     -webkit-transition: -webkit-transform 300ms ease;
@@ -36,7 +37,7 @@ export const Span = styled(ToggleIcon)`
     width: 100%;
     height: 0.3em;
     border-radius: 1px;
-    background-color: #eee;
+    background-color: ${TitleColor};
 
     &:before {
         -webkit-transform: translateY(-0.6em);
@@ -55,7 +56,7 @@ export const Span = styled(ToggleIcon)`
         width: 100%;
         height: 100%;
         border-radius: 1px;
-        background-color: #eee;
+        background-color: ${TitleColor};
 
         -webkit-transition: -webkit-transform 300ms ease;
         transition: -webkit-transform 300ms ease;

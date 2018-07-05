@@ -8,18 +8,9 @@ export const NavBar = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #333;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-`;
-
-
-export const HeaderContainer = styled(Flex)`
-    position: Fixed;
-    color: white;
     height: 70px;
-    width: 100%
+    background-color: white;
+    -webkit-box-shadow:  0px 0px 5px black;
     box-shadow: 0px 0px 5px black;
 `;
 
