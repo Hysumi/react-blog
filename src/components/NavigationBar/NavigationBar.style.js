@@ -2,6 +2,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Flex } from "../../theme/grid";
 
+export const NavBar = styled.div`
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+`;
+
+
 export const HeaderContainer = styled(Flex)`
     position: Fixed;
     color: white;
@@ -22,7 +35,6 @@ export const TitleContainer = styled(Flex)`
 `;
 
 export const Logo = styled.img`
-
     width: 70px;
     height: 70px;
 `;
