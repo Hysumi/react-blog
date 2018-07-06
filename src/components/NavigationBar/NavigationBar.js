@@ -1,15 +1,39 @@
 import React, { Component } from "react";
 import { ToggleButton } from "../ToggleButton/ToggleButton";
 
-import { NavBar } from "./NavigationBar.style";
-import { TitleColor, GamesColor, TutorialsColor, BlogColor, AboutColor } from "../../theme/variables";
+import { HeaderContainer, MobileBar, Header, NavList, NavItemList, TesteLink } from "./NavigationBar.style";
 
 class NavigationBar extends Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+            toggleOn: false
+        };
+
+        this.toggleClick = this.toggleClick.bind(this);
+    }
+
+    toggleClick () {
+        this.setState({
+            toggleOn: !this.state.toggleOn
+        });
+    }
+
     render () {
         return (
-            <NavBar>
-                <ToggleButton/>
-            </NavBar>
+            <HeaderContainer>
+                <MobileBar>
+                    <ToggleButton toggleClick={this.toggleClick} isClicked={this.state.toggleOn}/>
+                </MobileBar>
+                <Header>
+                    <NavList>
+                        <NavItemList>
+                            <TesteLink to="/">Teste</TesteLink>
+                        </NavItemList>
+                    </NavList>
+                </Header>
+            </HeaderContainer>
         );
     }
 }

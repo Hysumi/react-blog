@@ -3,24 +3,12 @@ import { ToggleTrigger, Span, ToggleIcon, ToggleContainer } from "./ToggleButton
 
 export class ToggleButton extends Component {
 
-    constructor () {
-        super();
-        this.state = {clicked: false};
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick () {
-        this.setState({clicked: !this.state.clicked});
-    }
-
     render () {
-        console.log(this.state.clicked);
-
         return (
             <ToggleContainer>
-                <ToggleTrigger onClick={this.handleClick} isClick={this.state.clicked}>
+                <ToggleTrigger onClick={this.props.toggleClick} isClick={this.props.isClicked}>
                     <ToggleIcon>
-                        <Span isClick={this.state.clicked}/>
+                        <Span isClick={this.props.isClicked}/>
                     </ToggleIcon>
                 </ToggleTrigger>
             </ToggleContainer>

@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Flex } from "../../theme/grid";
+import { TitleColor } from "../../theme/variables";
 
-export const NavBar = styled.div`
+export const HeaderContainer = styled.div`
+`;
+
+export const MobileBar = styled.div`
     z-index: 10;
     position: fixed;
     top: 0;
@@ -14,33 +17,36 @@ export const NavBar = styled.div`
     box-shadow: 0px 0px 5px black;
 `;
 
-export const NavigationContainer = styled(Flex)`
-    right: 0;
-    top: 25%;
-    position: absolute;
+export const Header = styled.div`
+    position: fixed;
+    top: 0;
+    left: -35%;
+    padding-top: 60px;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
+    text-align: center;
+    color: ${TitleColor};
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
 `;
 
-export const TitleContainer = styled(Flex)`
-    left: 0;
-    position: absolute;
+export const NavList = styled.ul`
+    height: 100%;
 `;
 
-export const Logo = styled.img`
-    width: 70px;
-    height: 70px;
+export const NavItemList = styled.li`
+    border-bottom: 1px solid ${TitleColor};
 `;
 
-export const NavImage = styled(Link)`
-`;
-
-export const NavTitle = styled(Link)`
-    margin-right: 1em;
-    font-size: 1.3em;
-    cursor: pointer;
-    line-height: 3;
-    position: relative;
-    text-decoration: none;
-    color: ${(props) => props.navigationcolor};
+export const TesteLink = styled(Link)`
+    display: block;
+    padding: 20px;
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in;
 `;
 
 export const NavItem = styled(Link)`
@@ -49,7 +55,7 @@ export const NavItem = styled(Link)`
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    color: ${(props) => props.navigationcolor};
+    color: ${TitleColor};
     &:before{
         content: "";
         position: absolute;
