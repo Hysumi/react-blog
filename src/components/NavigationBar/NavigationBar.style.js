@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { TitleColor } from "../../theme/variables";
+import { TitleColor, ItemHover } from "../../theme/variables";
 
 export const HeaderContainer = styled.div`
 `;
@@ -20,7 +20,7 @@ export const MobileBar = styled.div`
 export const Header = styled.div`
     position: fixed;
     top: 0;
-    left: -35%;
+    left: -70%;
     padding-top: 60px;
     width: 70%;
     height: 100%;
@@ -32,10 +32,17 @@ export const Header = styled.div`
     transition: -webkit-transform 300ms ease;
     transition: transform 300ms ease;
     transition: transform 300ms ease, -webkit-transform 300ms ease;
+
+    transform: ${(props) => {
+        return props.toggleOn ?
+            "-webkit-transform: translateX(100%); transform: translateX(100%);" +
+            "-webkit-transform: translate3d(100%, 0, 0);transform: translate3d(100%, 0, 0);" : "";
+    }};
 `;
 
 export const NavList = styled.ul`
     height: 100%;
+    margin-top: 15px;
 `;
 
 export const NavItemList = styled.li`
@@ -47,6 +54,10 @@ export const TesteLink = styled(Link)`
     padding: 20px;
     -webkit-transition: background-color 300ms ease-in;
     transition: background-color 300ms ease-in;
+
+    &:hover {
+        background-color:  ${ItemHover};
+    }
 `;
 
 export const NavItem = styled(Link)`

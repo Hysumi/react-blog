@@ -26,10 +26,19 @@ class NavigationBar extends Component {
                 <MobileBar>
                     <ToggleButton toggleClick={this.toggleClick} isClicked={this.state.toggleOn}/>
                 </MobileBar>
-                <Header>
+                <Header toggleOn={this.state.toggleOn}>
                     <NavList>
                         <NavItemList>
-                            <TesteLink to="/">Teste</TesteLink>
+                            <TesteLink to="/">Link 1</TesteLink>
+                        </NavItemList>
+                        <NavItemList>
+                            <TesteLink to="/">Link 2</TesteLink>
+                        </NavItemList>
+                        <NavItemList>
+                            <TesteLink to="/">Link 3</TesteLink>
+                        </NavItemList>
+                        <NavItemList>
+                            <TesteLink to="/">Link 4</TesteLink>
                         </NavItemList>
                     </NavList>
                 </Header>
