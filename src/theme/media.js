@@ -1,16 +1,16 @@
 import { css } from "styled-components";
 
 const sizes = {
-    mobileS: "320px",
-    mobileM: "375px",
-    mobileL: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    laptopL: "1440px",
-    desktop: "2560px"
+    mobileS: 320,
+    mobileM: 375,
+    mobileL: 425,
+    tablet: 768,
+    laptop: 1024,
+    laptopL: 1440,
+    desktop: 2560
 };
 
-const media = Object.keys(sizes).reduce((finalMedia, size) => {
+export const media = Object.keys(sizes).reduce((finalMedia, size) => {
     return {
         ...finalMedia,
         [size]: function (...args) {
@@ -22,5 +22,6 @@ const media = Object.keys(sizes).reduce((finalMedia, size) => {
         }
     };
 }, {});
+
 
 export default media;

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { TitleColor, ItemHover } from "../../theme/variables";
+import { TitleColor } from "../../theme/variables";
 
-export const HeaderContainer = styled.div`
+export const Header = styled.div`
+
 `;
 
-export const MobileBar = styled.div`
+export const NavBar = styled.div`
     z-index: 10;
     position: fixed;
     top: 0;
@@ -17,46 +18,12 @@ export const MobileBar = styled.div`
     box-shadow: 0px 0px 5px black;
 `;
 
-export const Header = styled.div`
-    position: fixed;
-    top: 0;
-    left: -70%;
-    padding-top: 60px;
-    width: 70%;
-    height: 100%;
-    background-color: white;
-    overflow-y: scroll;
-    text-align: center;
-    color: ${TitleColor};
-    -webkit-transition: -webkit-transform 300ms ease;
-    transition: -webkit-transform 300ms ease;
-    transition: transform 300ms ease;
-    transition: transform 300ms ease, -webkit-transform 300ms ease;
-
-    transform: ${(props) => {
-        return props.toggleOn ?
-            "-webkit-transform: translateX(100%); transform: translateX(100%);" +
-            "-webkit-transform: translate3d(100%, 0, 0);transform: translate3d(100%, 0, 0);" : "";
-    }};
-`;
-
-export const NavList = styled.ul`
-    height: 100%;
-    margin-top: 15px;
-`;
-
-export const NavItemList = styled.li`
-    border-bottom: 1px solid ${TitleColor};
-`;
-
-export const TesteLink = styled(Link)`
-    display: block;
-    padding: 20px;
-    -webkit-transition: background-color 300ms ease-in;
-    transition: background-color 300ms ease-in;
-
-    &:hover {
-        background-color:  ${ItemHover};
+export const NavigationContainer = styled.div`
+    right: 0;
+    top: 25%;
+    position: absolute;
+    @media (max-width: 767px) {
+        display: none;
     }
 `;
 
@@ -86,4 +53,28 @@ export const NavItem = styled(Link)`
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
+`;
+
+export const TitleContainer = styled.div`
+    position: absolute;
+    @media (max-width: 767px) {
+        padding-left: 70px;
+    }
+`;
+
+export const Logo = styled.img`
+    width: 70px;
+    height: 70px;
+`;
+
+export const NavImage = styled(Link)`
+`;
+
+export const NavTitle = styled(Link)`
+    margin-right: 1em;
+    font-size: 1.3em;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: ${(props) => props.navigationcolor};
 `;

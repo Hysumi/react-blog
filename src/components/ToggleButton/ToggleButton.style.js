@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { TitleColor } from "../../theme/variables";
 
 export const ToggleContainer = styled.div`
-    top: 0;
-    left: 0;
     padding: 15px;
+    @media (min-width: 768px) {
+        display: none;
+    }
+
 `;
 
 export const ToggleTrigger = styled.div`

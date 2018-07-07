@@ -1,9 +1,13 @@
 import React, { Component } from "react";
+
+// components
 import { ToggleButton } from "../ToggleButton/ToggleButton";
+import { MobileNavigationBar } from "../MobileNavigationBar/MobileNavigationBar";
 
-import { HeaderContainer, MobileBar, Header, NavList, NavItemList, TesteLink } from "./NavigationBar.style";
+import { Header, NavBar, NavigationContainer, NavItem, TitleContainer, NavTitle, NavImage, Logo } from "./NavigationBar.style";
+import { TitleColor, GamesColor, TutorialsColor, BlogColor, AboutColor } from "../../theme/variables";
 
-class NavigationBar extends Component {
+export class NavigationBar extends Component {
     constructor (props) {
         super(props);
 
@@ -22,27 +26,36 @@ class NavigationBar extends Component {
 
     render () {
         return (
-            <HeaderContainer>
-                <MobileBar>
+            <Header>
+                <NavBar>
+                    <TitleContainer>
+                        <NavImage to="/">
+                            <Logo src={require("../../assets/images/logo.jpg")}/>
+                        </NavImage>
+                        <NavTitle navigationcolor={TitleColor} to="/">
+                            Nome do Role
+                        </NavTitle>
+                    </TitleContainer>
+
                     <ToggleButton toggleClick={this.toggleClick} isClicked={this.state.toggleOn}/>
-                </MobileBar>
-                <Header toggleOn={this.state.toggleOn}>
-                    <NavList>
-                        <NavItemList>
-                            <TesteLink to="/">Link 1</TesteLink>
-                        </NavItemList>
-                        <NavItemList>
-                            <TesteLink to="/">Link 2</TesteLink>
-                        </NavItemList>
-                        <NavItemList>
-                            <TesteLink to="/">Link 3</TesteLink>
-                        </NavItemList>
-                        <NavItemList>
-                            <TesteLink to="/">Link 4</TesteLink>
-                        </NavItemList>
-                    </NavList>
-                </Header>
-            </HeaderContainer>
+
+                    <NavigationContainer>
+                        <NavItem navigationcolor={TitleColor} maincolor={GamesColor} to="/blog">
+                            Games
+                        </NavItem>
+                        <NavItem navigationcolor={TitleColor} maincolor={TutorialsColor} to="/blog">
+                            Tutorials
+                        </NavItem>
+                        <NavItem navigationcolor={TitleColor} maincolor={BlogColor} to="/blog">
+                            Blog
+                        </NavItem>
+                        <NavItem navigationcolor={TitleColor} maincolor={AboutColor} to="/blog">
+                            About
+                        </NavItem>
+                    </NavigationContainer>
+                </NavBar>
+                <MobileNavigationBar toggleOn={this.state.toggleOn}/>
+            </Header>
         );
     }
 }
