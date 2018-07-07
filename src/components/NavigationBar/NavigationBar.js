@@ -33,7 +33,7 @@ export class NavigationBar extends Component {
                             <Logo src={require("../../assets/images/logo.jpg")}/>
                         </NavImage>
                         <NavTitle navigationcolor={TitleColor} to="/">
-                            Nome do Role
+                            The Procrastinator Hub
                         </NavTitle>
                     </TitleContainer>
 
