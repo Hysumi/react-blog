@@ -37,15 +37,15 @@ export const MobileNavContainer = styled.div`
     }
 `;
 
-export const MobileList = styled.div`
+export const MobileNavList = styled.div`
     height: 100%;
 `;
 
-export const MobileItemList = styled.div`
+export const MobileNavItem = styled.div`
     border-bottom: 1px solid ${TitleColor};
 `;
 
-export const MobileBarLink = styled(Link)`
+export const MobileNavLink = styled(Link)`
     display: block;
     padding: 20px;
     font-size: 1.3em;

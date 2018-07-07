@@ -1,27 +1,27 @@
 import React, { Component } from "react";
-import { MobileNavContainer, MobileList, MobileItemList, MobileBarLink } from "./MobileNavigationBar.style";
+import { MobileNavContainer, MobileNavList, MobileNavItem, MobileNavLink } from "./MobileNavigationBar.style";
 
 export class MobileNavigationBar extends Component {
     render () {
         return (
             <MobileNavContainer toggleOn={this.props.toggleOn}>
-                <MobileList>
-                    <MobileItemList>
-                        <MobileBarLink to="/">Home</MobileBarLink>
-                    </MobileItemList>
-                    <MobileItemList>
-                        <MobileBarLink to="/">Games</MobileBarLink>
-                    </MobileItemList>
-                    <MobileItemList>
-                        <MobileBarLink to="/">Tutorials</MobileBarLink>
-                    </MobileItemList>
-                    <MobileItemList>
-                        <MobileBarLink to="/">Blog</MobileBarLink>
-                    </MobileItemList>
-                    <MobileItemList>
-                        <MobileBarLink to="/">About</MobileBarLink>
-                    </MobileItemList>
-                </MobileList>
+                <MobileNavList>
+                    <MobileNavItem>
+                        <MobileNavLink to="/">Home</MobileNavLink>
+                    </MobileNavItem>
+                    <MobileNavItem>
+                        <MobileNavLink to="/">Games</MobileNavLink>
+                    </MobileNavItem>
+                    <MobileNavItem>
+                        <MobileNavLink to="/">Tutorials</MobileNavLink>
+                    </MobileNavItem>
+                    <MobileNavItem>
+                        <MobileNavLink to="/">Blog</MobileNavLink>
+                    </MobileNavItem>
+                    <MobileNavItem>
+                        <MobileNavLink to="/">About</MobileNavLink>
+                    </MobileNavItem>
+                </MobileNavList>
             </MobileNavContainer>
         );
     }
