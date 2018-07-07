@@ -9,6 +9,9 @@ export const MobileNavContainer = styled.div`
     padding-top: 70px;
     width: 70%;
     height: 100%;
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;
+    max-height: fill-available;
     background-color: white;
     overflow-y: scroll;
     text-align: center;
@@ -35,7 +38,6 @@ export const MobileNavContainer = styled.div`
 `;
 
 export const MobileList = styled.div`
-
     height: 100%;
 `;
 
