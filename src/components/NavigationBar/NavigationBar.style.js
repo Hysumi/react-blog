@@ -59,6 +59,7 @@ export const NavItem = styled(Link)`
 `;
 
 export const TitleContainer = styled(Flex)`
+    flex-wrap: wrap;
     position: absolute;
     padding-left: 1em;
 
@@ -84,13 +85,18 @@ export const NavTitle = styled(Link)`
     text-decoration: none;
     color: ${(props) => props.navigationcolor};
 
-    ${media.mobileM`
+    ${media.smallerThanMobileL`
         font-size: 1.1em;
         line-height: 3.5;
     `}
 
-    ${media.mobileS`
+    ${media.smallerThanMobileM`
         font-size: 0.9em;
         line-height: 4.5;
+    `}
+
+    ${media.smallerThanMobileS`
+        font-size: 0.5em;
+        line-height: 7.5;
     `}
 `;

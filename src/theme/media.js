@@ -1,8 +1,11 @@
 import { css } from "styled-components";
 
 const sizes = {
+    smallerThanMobileS: 310,
     mobileS: 320,
+    smallerThanMobileM: 350,
     mobileM: 375,
+    smallerThanMobileL: 400,
     mobileL: 425,
     smallerThanTablet: 767,
     tablet: 768,
