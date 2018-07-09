@@ -99,4 +99,7 @@ export const NavTitle = styled(Link)`
         font-size: 0.5em;
         line-height: 7.5;
     `}
+    ${media.smallest`
+        display: none;
+    `}
 `;
