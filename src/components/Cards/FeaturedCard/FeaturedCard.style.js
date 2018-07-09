@@ -153,20 +153,24 @@ export const CardReadMore = styled(Link)`
         transition: 0.3s ease;
 	    -webkit-transition: 0.3s ease;
 
-        content: "";
-        margin-left: 30px;
+        content:  "";
+        margin-left: 0px;
         opacity: 0;
         vertical-align: middle;
     }
 
     &:hover:after {
-        margin-left: 20px;
+        margin-left: 10px;
         opacity: 1;
-    }
-`;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 0;
+        height: 0;
 
-export const CardReadMoreArrow = styled(Link)`
-    color: green;
-    margin-bottom: 10px;
-    float: right;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid green;
+    }
 `;

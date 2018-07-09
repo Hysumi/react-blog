@@ -11,11 +11,10 @@ import {
     CardTitle,
     CardSubTitle,
     CardSummary,
-    CardReadMore,
-    CardReadMoreArrow
+    CardReadMore
 } from "./FeaturedCard.style";
 
-import { BookmarkIcon, CalendarIcon, TagsIcon, LeftArrowIcon } from "../../../theme/icons";
+import { BookmarkIcon, CalendarIcon, TagsIcon } from "../../../theme/icons";
 
 export class FeaturedCard extends Component {
     constructor (props) {
@@ -72,10 +71,6 @@ export class FeaturedCard extends Component {
                     <CardReadMore to="/">
                         Read More
                     </CardReadMore>
-                    <CardReadMoreArrow to="/">
-                        <LeftArrowIcon/>
-                    </CardReadMoreArrow>
-
                 </CardDescriptionContainer>
             </CardContainer>
         );
