@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 export const CardContainer = styled.div`
     transition: 0.3s height ease;
 	-webkit-transition: 0.3s height ease;
@@ -70,18 +69,6 @@ export const CardItem = styled.div`
     }
 `;
 
-export const CardType = styled.div`
-    &:before {
-        content: "\f007";
-    }
-`;
-
-export const CardDate = styled.div`
-    &:before {
-        content: "\f133";
-    }
-`;
-
 export const CardLink = styled(Link)`
     color: inherit;
 	border-bottom: 1px dotted;
@@ -91,9 +78,6 @@ export const CardLink = styled(Link)`
 `;
 
 export const CardTags = styled.div`
-    &:before {
-		content: "\f02b";
-	}
     list-style: none;
     margin: 0;
     padding: 0;
@@ -169,14 +153,20 @@ export const CardReadMore = styled(Link)`
         transition: 0.3s ease;
 	    -webkit-transition: 0.3s ease;
 
-        content: "\f061";
-        margin-left: -10px;
+        content: "";
+        margin-left: 30px;
         opacity: 0;
         vertical-align: middle;
     }
 
     &:hover:after {
-        margin-left: 5px;
+        margin-left: 20px;
         opacity: 1;
     }
+`;
+
+export const CardReadMoreArrow = styled(Link)`
+    color: green;
+    margin-bottom: 10px;
+    float: right;
 `;

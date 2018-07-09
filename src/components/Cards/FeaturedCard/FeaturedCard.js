@@ -4,17 +4,18 @@ import {
     CardImage,
     CardDetails,
     CardItem,
-    CardType,
     CardLink,
-    CardDate,
     CardTags,
     CardTag,
     CardDescriptionContainer,
     CardTitle,
     CardSubTitle,
     CardSummary,
-    CardReadMore
+    CardReadMore,
+    CardReadMoreArrow
 } from "./FeaturedCard.style";
+
+import { BookmarkIcon, CalendarIcon, TagsIcon, LeftArrowIcon } from "../../../theme/icons";
 
 export class FeaturedCard extends Component {
     constructor (props) {
@@ -46,15 +47,17 @@ export class FeaturedCard extends Component {
                 <CardImage isHover={this.state.isMouseHover}/>
                 <CardDetails isHover={this.state.isMouseHover}>
                     <CardItem>
-                        <CardType>
-                            <CardLink to="/">Teste</CardLink>
-                        </CardType>
+                        <BookmarkIcon/>
+                        <CardLink to="/">
+                            Teste
+                        </CardLink>
                     </CardItem>
                     <CardItem>
-                        <CardDate>Aug. 24, 2015</CardDate>
+                        <CalendarIcon/>Aug. 24, 2015
                     </CardItem>
                     <CardItem>
                         <CardTags>
+                            <TagsIcon/>
                             <CardTag><CardLink to="/">Learn</CardLink></CardTag>
                             <CardTag><CardLink to="/">Code</CardLink></CardTag>
                             <CardTag><CardLink to="/">HTML</CardLink></CardTag>
@@ -66,7 +69,13 @@ export class FeaturedCard extends Component {
                     <CardTitle>Learning to Code</CardTitle>
                     <CardSubTitle>Opening a door to the future</CardSubTitle>
                     <CardSummary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</CardSummary>
-                    <CardReadMore to="/">Read More</CardReadMore>
+                    <CardReadMore to="/">
+                        Read More
+                    </CardReadMore>
+                    <CardReadMoreArrow to="/">
+                        <LeftArrowIcon/>
+                    </CardReadMoreArrow>
+
                 </CardDescriptionContainer>
             </CardContainer>
         );
