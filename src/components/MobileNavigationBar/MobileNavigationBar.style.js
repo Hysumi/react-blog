@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { TitleColor, ItemHover } from "../../theme/variables";
 
 export const MobileNavContainer = styled.div`
+    z-index: 1;
     position: fixed;
     top: 0;
     left: -70%;
