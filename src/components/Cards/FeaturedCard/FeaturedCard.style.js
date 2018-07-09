@@ -54,7 +54,7 @@ export const CardDetails = styled.div`
     margin: 0;
     padding: 10px 15px;
     height: 200px;
-
+    width: 100%;
     /*POSITION*/
     position: absolute;
     top: 0;
