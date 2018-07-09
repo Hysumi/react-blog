@@ -21,7 +21,8 @@ export class FeaturedCard extends Component {
         super(props);
 
         this.state = {
-            isMouseHover: false
+            isMouseHover: false,
+            cardType: this.props.cardType
         };
 
         this.mouseHoverEnter = this.mouseHoverEnter.bind(this);
@@ -47,7 +48,7 @@ export class FeaturedCard extends Component {
                 <CardDetails isHover={this.state.isMouseHover}>
                     <CardItem>
                         <BookmarkIcon/>
-                        <CardLink to="/">
+                        <CardLink cardcolor={this.state.cardType} to="/">
                             Teste
                         </CardLink>
                     </CardItem>
@@ -57,18 +58,18 @@ export class FeaturedCard extends Component {
                     <CardItem>
                         <CardTags>
                             <TagsIcon/>
-                            <CardTag><CardLink to="/">Learn</CardLink></CardTag>
-                            <CardTag><CardLink to="/">Code</CardLink></CardTag>
-                            <CardTag><CardLink to="/">HTML</CardLink></CardTag>
-                            <CardTag><CardLink to="/">CSS</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">Learn</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">Code</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">HTML</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">CSS</CardLink></CardTag>
                         </CardTags>
                     </CardItem>
                 </CardDetails>
                 <CardDescriptionContainer>
                     <CardTitle>Learning to Code</CardTitle>
                     <CardSubTitle>Opening a door to the future</CardSubTitle>
-                    <CardSummary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</CardSummary>
-                    <CardReadMore to="/">
+                    <CardSummary cardcolor={this.state.cardType}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</CardSummary>
+                    <CardReadMore cardcolor={this.state.cardType} to="/">
                         Read More
                     </CardReadMore>
                 </CardDescriptionContainer>

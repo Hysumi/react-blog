@@ -5,6 +5,9 @@ import { Container } from "../../theme/grid";
 // Components
 import { FeaturedCard } from "../../components/Cards/FeaturedCard/FeaturedCard";
 import { Banner } from "../../components/Banner/Banner";
+
+import { GamesColor, TutorialsColor, BlogColor, AboutColor } from "../../theme/variables";
+
 export default class Home extends Component {
     render () {
         return (
@@ -13,12 +16,12 @@ export default class Home extends Component {
 
                 <Container>
                     <Page>
-                        <FeaturedCard/>
-                        <FeaturedCard/>
+                        <FeaturedCard cardType={ GamesColor }/>
+                        <FeaturedCard cardType={ TutorialsColor }/>
 
-                        <FeaturedCard/>
+                        <FeaturedCard cardType={ BlogColor }/>
 
-                        <FeaturedCard/>
+                        <FeaturedCard cardType={ AboutColor }/>
 
                     </Page>
 

@@ -86,7 +86,7 @@ export const CardLink = styled(Link)`
     color: inherit;
 	border-bottom: 1px dotted;
 	&:hover {
-		color: green;
+		color: ${(props) => props.cardcolor};
 	}
 `;
 
@@ -150,7 +150,7 @@ export const CardSummary = styled.p`
 
     &:after {
         content: "";
-        background: green;
+        background: ${(props) => props.cardcolor};
         height: 6px;
         width: 40px;
 
@@ -162,7 +162,7 @@ export const CardSummary = styled.p`
 `;
 
 export const CardReadMore = styled(Link)`
-    color: green;
+    color: ${(props) => props.cardcolor};
     margin-bottom: 10px;
     float: right;
 
@@ -188,6 +188,6 @@ export const CardReadMore = styled(Link)`
 
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
-        border-left: 5px solid green;
+        border-left: 5px solid ${(props) => props.cardcolor};
     }
 `;
