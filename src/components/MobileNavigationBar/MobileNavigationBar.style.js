@@ -22,7 +22,7 @@ export const MobileNavContainer = styled.div`
     transition: transform 300ms ease;
     transition: transform 300ms ease, -webkit-transform 300ms ease;
 
-    transform: ${(props) => {
+    ${(props) => {
         return props.toggleOn ?
             "-webkit-transform: translateX(100%); transform: translateX(100%);" +
             "-webkit-transform: translate3d(100%, 0, 0);transform: translate3d(100%, 0, 0);" +

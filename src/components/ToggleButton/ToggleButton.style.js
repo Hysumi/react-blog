@@ -18,7 +18,7 @@ export const ToggleTrigger = styled.div`
     transition: transform 300ms ease;
     transition: transform 300ms ease, -webkit-transform 300ms ease;
 
-    transform: ${(props) => {
+    ${(props) => {
         return props.isClick ? "-webkit-transform: rotate(45deg);transform: rotate(45deg);" : "";
     }};
 `;
