@@ -51,7 +51,7 @@ export const CardDetails = styled.div`
     /*POSITION*/
     position: absolute;
     top: 0;
-	${(props) => {
+	left: ${(props) => {
         return props.isHover ? "0px" : "-100%";
     }};
 
