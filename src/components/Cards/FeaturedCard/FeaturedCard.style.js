@@ -16,6 +16,7 @@ export const CardContainer = styled.div`
 	line-height: 1.45em;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-bottom: 1.5em;
 
     ${mediaMinWidth.tablet`
         height: 200px;
