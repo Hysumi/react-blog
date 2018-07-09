@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { TitleColor, ItemHover } from "../../theme/variables";
+import { mediaMinWidth } from "../../theme/media";
 
 export const MobileNavContainer = styled.div`
     z-index: 1;
@@ -30,12 +31,11 @@ export const MobileNavContainer = styled.div`
             : "";
     }};
 
-    @media (min-width: 768px) {
+    ${mediaMinWidth.tablet`
         -webkit-transform: translateX(0);
         transform: translateX(0);
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+        transform: translate3d(0, 0, 0);    `}
 `;
 
 export const MobileNavList = styled.div`

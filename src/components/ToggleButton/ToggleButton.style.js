@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { TitleColor } from "../../theme/variables";
+import { mediaMinWidth } from "../../theme/media";
 
 export const ToggleContainer = styled.div`
     padding: 15px;
-    @media (min-width: 768px) {
-        display: none;
-    }
 
+    ${mediaMinWidth.tablet`
+        display: none;
+    `}
 `;
 
 export const ToggleTrigger = styled.div`

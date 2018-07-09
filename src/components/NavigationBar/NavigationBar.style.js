@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { TitleColor } from "../../theme/variables";
 
 import { Flex } from "../../theme/grid";
-import media from "../../theme/media";
+import mediaMaxWidth from "../../theme/media";
 
 export const Header = styled.div`
 
@@ -25,7 +25,7 @@ export const NavigationContainer = styled.div`
     right: 0;
     top: 25%;
     position: absolute;
-    ${media.smallerThanTablet`
+    ${mediaMaxWidth.smallerThanTablet`
         display: none;
     `}
 `;
@@ -63,7 +63,7 @@ export const TitleContainer = styled(Flex)`
     position: absolute;
     padding-left: 1em;
 
-    ${media.smallerThanTablet`
+    ${mediaMaxWidth.smallerThanTablet`
         padding-left: 2.5em;
     `}
 `;
@@ -85,21 +85,21 @@ export const NavTitle = styled(Link)`
     text-decoration: none;
     color: ${(props) => props.navigationcolor};
 
-    ${media.smallerThanMobileL`
+    ${mediaMaxWidth.smallerThanMobileL`
         font-size: 1.1em;
         line-height: 3.5;
     `}
 
-    ${media.smallerThanMobileM`
+    ${mediaMaxWidth.smallerThanMobileM`
         font-size: 0.9em;
         line-height: 4.5;
     `}
 
-    ${media.mobileS`
+    ${mediaMaxWidth.mobileS`
         font-size: 0.5em;
         line-height: 7.5;
     `}
-    ${media.smallest`
+    ${mediaMaxWidth.smallest`
         display: none;
     `}
 `;

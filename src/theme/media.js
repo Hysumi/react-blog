@@ -15,7 +15,7 @@ const sizes = {
     desktop: 2560
 };
 
-export const media = Object.keys(sizes).reduce((finalMedia, size) => {
+export const mediaMaxWidth = Object.keys(sizes).reduce((finalMedia, size) => {
     return {
         ...finalMedia,
         [size]: function (...args) {
@@ -28,5 +28,18 @@ export const media = Object.keys(sizes).reduce((finalMedia, size) => {
     };
 }, {});
 
+export const mediaMinWidth = Object.keys(sizes).reduce((finalMedia, size) => {
+    return {
+        ...finalMedia,
+        [size]: function (...args) {
+            return css`
+                @media(min-width: ${sizes[size]}px) {
+                    ${css(...args)}
+                }
+            `;
+        }
+    };
+}, {});
 
-export default media;
+
+export default mediaMaxWidth;

@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import media from "./media";
+import mediaMaxWidth from "./media";
 
 export const Div = styled.div`
      ${({ marginBottom }) => marginBottom && css`
@@ -12,40 +12,40 @@ export const Container = styled(Div)`
     padding-right: 120px;
     padding-top: 30px;
 
-    ${media.desktop`
+    ${mediaMaxWidth.desktop`
         padding-left: 100px;
         padding-right: 100px;
         padding-top: 30px;
     `}
 
-    ${media.laptopL`
+    ${mediaMaxWidth.laptopL`
         padding-left: 90px;
         padding-right: 90px;
         padding-top: 30px;
     `}
 
-    ${media.laptop`
+    ${mediaMaxWidth.laptop`
         padding-left: 80px;
         padding-right: 80px;
         padding-top: 30px;
     `}
-    ${media.tablet`
+    ${mediaMaxWidth.tablet`
         padding-left: 70px;
         padding-right: 70px;
         padding-top: 15px;
     `}
 
-    ${media.mobileL`
+    ${mediaMaxWidth.mobileL`
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 10px;
     `}
-    ${media.mobileM`
+    ${mediaMaxWidth.mobileM`
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 10px;
     `}
-    ${media.mobileS`
+    ${mediaMaxWidth.mobileS`
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 5px;
