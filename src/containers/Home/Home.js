@@ -4,64 +4,26 @@ import { Container } from "../../theme/grid";
 
 // Components
 import { FeaturedCard } from "../../components/Cards/FeaturedCard/FeaturedCard";
-
+import { Banner } from "../../components/Banner/Banner";
 export default class Home extends Component {
     render () {
         return (
-            <Container>
-                <Page>
-                    <FeaturedCard/>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                    <h1> Home </h1>
-                </Page>
-            </Container>
+            <div>
+                <Banner/>
+
+                <Container>
+                    <Page>
+                        <FeaturedCard/>
+                        <FeaturedCard/>
+
+                        <FeaturedCard/>
+
+                        <FeaturedCard/>
+
+                    </Page>
+
+                </Container>
+            </div>
         );
     }
 }
