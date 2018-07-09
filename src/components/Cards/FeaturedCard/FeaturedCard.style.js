@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { mediaMinWidth } from "../../../theme/media";
 
 export const CardContainer = styled.div`
     transition: 0.3s height ease;
 	-webkit-transition: 0.3s height ease;
-    height: 200px;
-	max-width: 600px;
 
     background: #fff;
 	border-radius: 3px;
@@ -17,6 +16,11 @@ export const CardContainer = styled.div`
 	line-height: 1.45em;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    ${mediaMinWidth.tablet`
+        height: 200px;
+	    max-width: 600px;
+    `}
 `;
 
 export const CardImage = styled.div`
@@ -24,13 +28,18 @@ export const CardImage = styled.div`
 	position: relative;
     background: url(${require("../../../assets/images/Abyss-map-colored.jpg")}) center no-repeat;
 	background-size: cover;
-    float: left;
-    height: 100%;
-    width: 40%;
-    transition: 0.5s ease; -webkit-transition: 0.5s ease;
-    ${(props) => {
+
+    ${mediaMinWidth.tablet`
+        transition: 0.5s ease; -webkit-transition: 0.5s ease;
+        float: left;
+        height: 100%;
+        width: 40%;
+
+        ${(props) => {
         return props.isHover ? "transform: rotate(5deg) scale(1.3);" : "";
     }};
+
+    `}
 `;
 
 export const CardDetails = styled.div`
@@ -45,7 +54,6 @@ export const CardDetails = styled.div`
     margin: 0;
     padding: 10px 15px;
     height: 200px;
-    width: 40%;
 
     /*POSITION*/
     position: absolute;
@@ -58,6 +66,11 @@ export const CardDetails = styled.div`
         margin-right: 10px;
         vertical-align: middle;
     }
+
+    ${mediaMinWidth.tablet`
+        width: 40%;
+    `}
+
 `;
 
 export const CardItem = styled.div`
@@ -92,22 +105,26 @@ export const CardDescriptionContainer = styled.div`
     padding: 10px;
     box-sizing: border-box;
     position: relative;
-    float: left;
-    width: 60%;
-    z-index: 0;
-    &:before {
-        transform: skewX(-5deg);
-        content: "";
-        background: #fff;
-        width: 100%;
-        z-index: -1;
 
-        /*POSITION*/
-        position: absolute;
-        left: -15px;
-        top: 0;
-        bottom: 0;
-    }
+
+    ${mediaMinWidth.tablet`
+        float: left;
+        width: 60%;
+        z-index: 0;
+        &:before {
+            transform: skewX(-5deg);
+            content: "";
+            background: #fff;
+            width: 100%;
+            z-index: -1;
+
+            position: absolute;
+            left: -15px;
+            top: 0;
+            bottom: 0;
+        }
+    `}
+
 `;
 
 export const CardTitle = styled.h1`
