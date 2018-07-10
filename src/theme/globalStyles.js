@@ -10,6 +10,7 @@ injectGlobal`
         font-weight: 400;
         font-style: normal;
         margin: 0;
+        background-color: #f0f0f0;
     }
 
 `;

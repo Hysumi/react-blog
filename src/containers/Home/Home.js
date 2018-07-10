@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Page } from "./Home.style";
+import { FeatureContainer, FeatureTitle } from "./Home.style";
 import { Container } from "../../theme/grid";
 
 // Components
@@ -11,22 +11,16 @@ import { GamesColor, TutorialsColor, BlogColor, AboutColor } from "../../theme/v
 export default class Home extends Component {
     render () {
         return (
-            <div>
+            <Container>
                 <Banner/>
+                <FeatureContainer>
+                    <FeaturedCard cardType={ GamesColor }/>
+                    <FeaturedCard cardType={ TutorialsColor }/>
+                    <FeaturedCard cardType={ BlogColor }/>
+                    <FeaturedCard cardType={ AboutColor }/>
+                </FeatureContainer>
 
-                <Container>
-                    <Page>
-                        <FeaturedCard cardType={ GamesColor }/>
-                        <FeaturedCard cardType={ TutorialsColor }/>
-
-                        <FeaturedCard cardType={ BlogColor }/>
-
-                        <FeaturedCard cardType={ AboutColor }/>
-
-                    </Page>
-
-                </Container>
-            </div>
+            </Container>
         );
     }
 }
