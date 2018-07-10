@@ -58,10 +58,13 @@ export class FeaturedCard extends Component {
                     <CardItem>
                         <CardTags>
                             <TagsIcon/>
-                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">Learn</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">Code</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">HTML</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">CSS</CardLink></CardTag>
+
+                            {this.state.data.Tags.map((tag, i) =>
+                                <CardTag>
+                                    <CardLink cardcolor={this.state.data.ColorType} to="/">
+                                        {tag}
+                                    </CardLink>
+                                </CardTag>)}
                         </CardTags>
                     </CardItem>
                 </CardDetails>
