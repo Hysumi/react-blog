@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerBackground = styled.div`
-    background-image: url(${require("../../assets/images/democracyvsanarchy.jpg")});
+    background: url(${(props) => props.bannerBackgroundImage}) center no-repeat;
     /*height: 70%;*/
     height: 400px;
     background-position: center;

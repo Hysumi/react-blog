@@ -23,7 +23,3 @@ export const FeatureContainer = styled.div`
         padding-top: 1.6em;
     `}
 `;
-
-export const FeatureTitle = styled.div`
-    padding-bottom: 30px;
-`;

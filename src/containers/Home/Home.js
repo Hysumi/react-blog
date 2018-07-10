@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FeatureContainer, FeatureTitle } from "./Home.style";
+import { FeatureContainer } from "./Home.style";
 import { Container } from "../../theme/grid";
 
 // Components
@@ -13,7 +13,7 @@ import Buckat from "../../assets/images/buckat.jpg";
 import Unity from "../../assets/images/unity.jpg";
 import Dire from "../../assets/images/dirediredocs.png";
 import Maple from "../../assets/images/maplestory.png";
-
+import BannerImage from "../../assets/images/NewChallenger.gif";
 
 const Cards = [
     {
@@ -62,7 +62,7 @@ export default class Home extends Component {
     render () {
         return (
             <Container>
-                <Banner/>
+                <Banner bannerBackgroundImage={ BannerImage }/>
                 <FeatureContainer>
                     <FeaturedCard cardData={ Cards[0] }/>
                     <FeaturedCard cardData={ Cards[1] }/>

@@ -41,7 +41,6 @@ export class FeaturedCard extends Component {
     }
 
     render () {
-        console.log(this.state.data.Background);
         return (
             <CardContainer onMouseEnter={this.mouseHoverEnter} onMouseLeave={this.mouseHoverLeave}>
                 <CardImage isHover={this.state.isMouseHover} cardBackground={this.state.data.Background}/>
@@ -60,7 +59,7 @@ export class FeaturedCard extends Component {
                             <TagsIcon/>
 
                             {this.state.data.Tags.map((tag, i) =>
-                                <CardTag>
+                                <CardTag key={i}>
                                     <CardLink cardcolor={this.state.data.ColorType} to="/">
                                         {tag}
                                     </CardLink>
