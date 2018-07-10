@@ -22,9 +22,8 @@ export class FeaturedCard extends Component {
 
         this.state = {
             isMouseHover: false,
-            cardType: this.props.cardType
+            data: this.props.cardData
         };
-
         this.mouseHoverEnter = this.mouseHoverEnter.bind(this);
         this.mouseHoverLeave = this.mouseHoverLeave.bind(this);
     }
@@ -42,34 +41,35 @@ export class FeaturedCard extends Component {
     }
 
     render () {
+        console.log(this.state.data.Background);
         return (
             <CardContainer onMouseEnter={this.mouseHoverEnter} onMouseLeave={this.mouseHoverLeave}>
-                <CardImage isHover={this.state.isMouseHover}/>
+                <CardImage isHover={this.state.isMouseHover} cardBackground={this.state.data.Background}/>
                 <CardDetails isHover={this.state.isMouseHover}>
                     <CardItem>
                         <BookmarkIcon/>
-                        <CardLink cardcolor={this.state.cardType} to="/">
-                            Teste
+                        <CardLink cardcolor={this.state.data.ColorType} to="/">
+                            {this.state.data.Type}
                         </CardLink>
                     </CardItem>
                     <CardItem>
-                        <CalendarIcon/>Aug. 24, 2015
+                        <CalendarIcon/>{this.state.data.Date}
                     </CardItem>
                     <CardItem>
                         <CardTags>
                             <TagsIcon/>
-                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">Learn</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">Code</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">HTML</CardLink></CardTag>
-                            <CardTag><CardLink cardcolor={this.state.cardType} to="/">CSS</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">Learn</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">Code</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">HTML</CardLink></CardTag>
+                            <CardTag><CardLink cardcolor={this.state.data.ColorType} to="/">CSS</CardLink></CardTag>
                         </CardTags>
                     </CardItem>
                 </CardDetails>
                 <CardDescriptionContainer>
-                    <CardTitle>Learning to Code</CardTitle>
-                    <CardSubTitle>Opening a door to the future</CardSubTitle>
-                    <CardSummary cardcolor={this.state.cardType}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</CardSummary>
-                    <CardReadMore cardcolor={this.state.cardType} to="/">
+                    <CardTitle>{this.state.data.Title}</CardTitle>
+                    <CardSubTitle>{this.state.data.SubTitle}</CardSubTitle>
+                    <CardSummary cardcolor={this.state.data.ColorType}>{this.state.data.Content}</CardSummary>
+                    <CardReadMore cardcolor={this.state.data.ColorType} to="/">
                         Read More
                     </CardReadMore>
                 </CardDescriptionContainer>

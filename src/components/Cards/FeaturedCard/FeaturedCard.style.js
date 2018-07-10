@@ -24,10 +24,11 @@ export const CardContainer = styled.div`
     `}
 `;
 
+
 export const CardImage = styled.div`
     height: 200px;
 	position: relative;
-    background: url(${require("../../../assets/images/Abyss-map-colored.jpg")}) center no-repeat;
+    background: url(${(props) => props.cardBackground}) center no-repeat;
 	background-size: cover;
 
     ${mediaMinWidth.tablet`
