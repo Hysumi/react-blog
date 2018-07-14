@@ -17,8 +17,8 @@ export const NavBar = styled.div`
     width: 100%;
     height: 70px;
     background-color: white;
-    -webkit-box-shadow:  0px 0px 5px black;
-    box-shadow: 0px 0px 5px black;
+    -webkit-box-shadow:  0px 0px 5px rgba(204, 204, 204, 0.6);
+    box-shadow: 0px 0px 5px rgba(204, 204, 204, 0.6);
 `;
 
 export const NavigationContainer = styled.div`
