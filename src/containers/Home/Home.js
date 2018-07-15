@@ -8,13 +8,6 @@ import { Banner } from "../../components/Banner/Banner";
 
 import { GamesColor, TutorialsColor, BlogColor } from "../../theme/variables";
 
-// Imagens
-import Buckat from "../../assets/images/buckat.jpg";
-import Unity from "../../assets/images/unity.jpg";
-import Dire from "../../assets/images/dirediredocs.png";
-import Maple from "../../assets/images/maplestory.png";
-import BannerImage from "../../assets/images/NewChallenger.gif";
-
 const Cards = [
     {
         Type: "Games",
@@ -23,7 +16,7 @@ const Cards = [
         Title: "Buckat: Ainda lançarei!",
         SubTitle: "Mas não é hoje...",
         Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
-        Background: Buckat,
+        Background: "buckat.jpg",
         ColorType: GamesColor
     },
     {
@@ -33,7 +26,7 @@ const Cards = [
         Title: "Games - Unity",
         SubTitle: "Um tutorial ai",
         Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
-        Background: Unity,
+        Background: "unity.jpg",
         ColorType: TutorialsColor
     },
     {
@@ -43,7 +36,7 @@ const Cards = [
         Title: "Relaxing Musics",
         SubTitle: "Dire Dire Docs",
         Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
-        Background: Dire,
+        Background: "dirediredocs.png",
         ColorType: BlogColor
     },
     {
@@ -53,7 +46,7 @@ const Cards = [
         Title: "Level 220!!!",
         SubTitle: "Que plot <3",
         Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
-        Background: Maple,
+        Background: "maplestory.png",
         ColorType: BlogColor
     }
 ];
@@ -62,7 +55,7 @@ export default class Home extends Component {
     render () {
         return (
             <Container>
-                <Banner bannerBackgroundImage={ BannerImage }/>
+                <Banner bannerBackgroundImage={"NewChallenger.gif"}/>
                 <FeatureContainer>
                     <FeaturedCard cardData={ Cards[0] }/>
                     <FeaturedCard cardData={ Cards[1] }/>

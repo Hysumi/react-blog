@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const BannerBackground = styled.div`
-    background: url(${(props) => props.bannerBackgroundImage}) center no-repeat;
+export const BannerBackground = styled.img`
     /*height: 70%;*/
     height: 400px;
     background-position: center;
