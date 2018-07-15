@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { mediaMinWidth } from "../../../theme/media";
+import { mediaMinWidth, mediaMaxWidth } from "../../../theme/media";
 
 export const CardContainer = styled.div`
     transition: 0.3s height ease;
@@ -24,11 +24,10 @@ export const CardContainer = styled.div`
     `}
 `;
 
-
 export const CardImage = styled.img`
-    height: 200px;
+    width: 100%;
+    min-height: 200px;
 	position: relative;
-	background-size: cover;
 
     ${mediaMinWidth.tablet`
         transition: 0.5s ease; -webkit-transition: 0.5s ease;
