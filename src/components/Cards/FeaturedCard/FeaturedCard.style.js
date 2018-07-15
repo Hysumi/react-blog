@@ -32,8 +32,9 @@ export const CardImage = styled.img`
     ${mediaMinWidth.tablet`
         transition: 0.5s ease; -webkit-transition: 0.5s ease;
         float: left;
-        height: 100%;
         width: 40%;
+        max-height: 200px;
+        max-width: 240px;
 
         ${(props) => {
         return props.isHover ? "transform: rotate(5deg) scale(1.3);" : "";
