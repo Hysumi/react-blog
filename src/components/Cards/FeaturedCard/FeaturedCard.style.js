@@ -25,10 +25,15 @@ export const CardContainer = styled.div`
 `;
 
 export const CardImage = styled.img`
-    width: 100%;
     min-height: 200px;
+    max-height: 240px;
+    object-fit: cover;
+    width: 100%;
 	position: relative;
-
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     ${mediaMinWidth.tablet`
         transition: 0.5s ease; -webkit-transition: 0.5s ease;
         float: left;

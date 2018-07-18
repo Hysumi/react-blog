@@ -43,7 +43,7 @@ export class FeaturedCard extends Component {
     render () {
         return (
             <CardContainer onMouseEnter={this.mouseHoverEnter} onMouseLeave={this.mouseHoverLeave} backgroundImage = {this.props.cardData.Background}>
-                <CardImage isHover={this.state.isMouseHover} src={require(`../../../assets/images/${this.props.cardData.Background}`)} align="middle"/>
+                <CardImage isHover={this.state.isMouseHover} src={require(`../../../assets/images/${this.props.cardData.Background}`)} align="center"/>
                 <CardDetails isHover={this.state.isMouseHover}>
                     <CardItem>
                         <BookmarkIcon/>
