@@ -15,10 +15,7 @@ export default class Home extends Component {
             <Container>
                 <Banner bannerBackgroundImage={"NewChallenger.gif"}/>
                 <FeatureContainer>
-                    <FeaturedCard cardData={ Cards[0] }/>
-                    <FeaturedCard cardData={ Cards[1] }/>
-                    <FeaturedCard cardData={ Cards[2] }/>
-                    <FeaturedCard cardData={ Cards[3] }/>
+                    {Cards.map((card, i) => <FeaturedCard key={i} cardData={ card }/>)}
                 </FeatureContainer>
 
             </Container>
