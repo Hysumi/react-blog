@@ -32,7 +32,7 @@ export const NavigationContainer = styled.div`
 
 export const NavItem = styled(Link)`
     margin-right: 1em;
-    font-size: 1.3em;
+    font-size: 1em;
     cursor: pointer;
     position: relative;
     text-decoration: none;
