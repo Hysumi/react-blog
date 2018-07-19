@@ -1,5 +1,7 @@
 import { GamesColor, TutorialsColor, BlogColor } from "../theme/variables";
 
+export const HomeBanner = "NewChallenger.gif";
+
 export const Cards = [
     {
         Type: "Games",
@@ -29,6 +31,26 @@ export const Cards = [
         SubTitle: "Dire Dire Docs",
         Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
         Background: "dirediredocs.png",
+        ColorType: BlogColor
+    },
+    {
+        Type: "Blog",
+        Date: "Jul. 05, 2018",
+        Tags: ["Maple Story", "TryHard", "Crack"],
+        Title: "Level 220!!!",
+        SubTitle: "Que plot <3",
+        Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
+        Background: "maplestory.png",
+        ColorType: BlogColor
+    },
+    {
+        Type: "Blog",
+        Date: "Jul. 05, 2018",
+        Tags: ["Maple Story", "TryHard", "Crack"],
+        Title: "Level 220!!!",
+        SubTitle: "Que plot <3",
+        Content: "Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.",
+        Background: "maplestory.png",
         ColorType: BlogColor
     },
     {
