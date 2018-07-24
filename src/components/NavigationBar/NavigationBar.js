@@ -30,7 +30,7 @@ export class NavigationBar extends Component {
                 <NavBar>
                     <TitleContainer>
                         <NavImage to="/">
-                            <Logo src={require("../../assets/images/logo.jpg")}/>
+                            <Logo src={require("../../assets/images/logo.png")}/>
                         </NavImage>
                         <NavTitle navigationcolor={TitleColor} to="/">
                             The Procrastinator Hub

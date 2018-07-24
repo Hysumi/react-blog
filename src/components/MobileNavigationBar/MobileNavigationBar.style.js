@@ -49,7 +49,7 @@ export const MobileNavItem = styled.div`
 export const MobileNavLink = styled(Link)`
     display: block;
     padding: 20px;
-    font-size: 1.3em;
+    font-size: 1em;
     cursor: pointer;
     position: relative;
     text-decoration: none;

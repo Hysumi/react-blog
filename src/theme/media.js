@@ -1,10 +1,10 @@
 import { css } from "styled-components";
 
 const sizes = {
-    smallest: 240,
+    smallest: 242,
     smallerThanMobileS: 310,
-    mobileS: 325,
-    smallerThanMobileM: 369,
+    mobileS: 328,
+    smallerThanMobileM: 371,
     mobileM: 375,
     smallerThanMobileL: 415,
     mobileL: 425,

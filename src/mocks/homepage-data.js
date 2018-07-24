@@ -1,6 +1,7 @@
 import { GamesColor, TutorialsColor, BlogColor } from "../theme/variables";
 
-export const HomeBanner = "NewChallenger.gif";
+export const MainBanner = "mainbanner.png";
+export const MobileBanner = "mainmobile.png";
 
 export const Cards = [
     {

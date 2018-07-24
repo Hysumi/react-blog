@@ -37,6 +37,7 @@ export const NavItem = styled(Link)`
     position: relative;
     text-decoration: none;
     color: ${TitleColor};
+    line-height: 2;
     &:before{
         content: "";
         position: absolute;
@@ -69,8 +70,9 @@ export const TitleContainer = styled(Flex)`
 `;
 
 export const Logo = styled.img`
-    width: 70px;
-    height: 70px;
+    width: 56px;
+    height: 56px;
+    padding: 0.5em;
 `;
 
 export const NavImage = styled(Link)`
